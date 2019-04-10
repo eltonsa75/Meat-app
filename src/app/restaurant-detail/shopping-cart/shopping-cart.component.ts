@@ -31,7 +31,7 @@ addItem(item: any) {
 }
 
 total(): number {
-  return this.shoppingCartService.total()
+  return this.shoppingCartService.total();
 }
 
 
