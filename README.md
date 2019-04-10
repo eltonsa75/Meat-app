@@ -1,10 +1,10 @@
-# Meat - Angular App Starter
+# Meat - Angular (Construindo Aplicações Web Com o Novo Angular (4, 5 e 6)) 
 
 ## 1. Passos para começar
 
 ### Clonando o Repositório
 
-`git clone https://github.com/cod3rcursos/meat-app-starter.git`
+`git clone https://github.com/eltonsa75/meat-app.git`
 
 ### Instalando as Dependências
 
@@ -145,3 +145,4 @@ Dependências dos pacotes que devem ficar em package.json:
 ## Créditos
 
 Todas as imagens usadas na aplicação são pertencentes a freepik.com
+Esse curso foi desenvolvido pela Tarso Bessa (COD3R Cursos Online)
