@@ -1,0 +1,10 @@
+<div class="form-group" [class.has-success]="hasSuccess()"
+                        [class.has-error]="hasError()">
+                <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> {{label}}</label>
+
+        <ng-content></ng-content>
+
+                <!-- required minlength validação de formulário a partir de 5 caracteres -->
+                <span class="help-block" *ngIf="hasSuccess()"><i class="fa fa-check"></i> OK</span>
+                <span class="help-block" *ngIf="hasError()"><i class="fa fa-remove"></i> {{ errorMessage}}</span>
+              </div>
