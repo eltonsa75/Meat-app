@@ -370,5 +370,61 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "address": "Pontes",
+      "number": "12",
+      "optionalAddress": "Ap 101",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "chocpop"
+        },
+        {
+          "quantity": 1,
+          "menuId": "icestd.png"
+        },
+        {
+          "quantity": 1,
+          "menuId": "sunday"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "address": "Rua Pedro De Alcantara",
+      "number": "60",
+      "optionalAddress": "casa 01",
+      "paymentOption": "MON",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "cake"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "address": "Rua Pontes",
+      "number": "200",
+      "optionalAddress": "apto 02",
+      "paymentOption": "REF",
+      "orderItems": [
+        {
+          "quantity": 1,
+          "menuId": "cup-cake"
+        },
+        {
+          "quantity": 1,
+          "menuId": "donut"
+        },
+        {
+          "quantity": 1,
+          "menuId": "bread"
+        }
+      ],
+      "id": 3
+    }
+  ]
 }
