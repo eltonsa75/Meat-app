@@ -1,6 +1,7 @@
 import { RestaurantsServices } from './restaurants.services';
 import { Component, OnInit } from '@angular/core';
 
+
 import { Restaurant } from './restaurant/restaurant.model';
 
 @Component({
@@ -9,6 +10,8 @@ import { Restaurant } from './restaurant/restaurant.model';
   styleUrls: ['./restaurants.component.css']
 })
 export class RestaurantsComponent implements OnInit {
+
+ 
 
   restaurants: Restaurant[]
 
