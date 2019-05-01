@@ -11,7 +11,7 @@ matches(another: User): boolean {
 }
 
 
-export const users = {
-    "juliana@gmail.com": new User('juliana@gmail.com', 'Juliana', 'juliana23'),
-    "amanda@gmail.com": new User('amanda@gmail.com', 'Amanda', 'amanda21')
+export const users: {[key: string]: User} = {
+    'juliana@gmail.com': new User('juliana@gmail.com', 'Juliana', 'juliana23'),
+    'amanda@gmail.com': new User('amanda@gmail.com', 'Amanda', 'amanda21')
 }
