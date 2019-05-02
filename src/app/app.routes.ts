@@ -1,3 +1,4 @@
+import { LoginComponent } from './security/login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { OrderSumaryComponent } from './order-sumary/order-sumary.component';
 import { MenuComponent } from './restaurant-detail/menu/menu.component';
@@ -13,6 +14,7 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 export const ROUTES: Routes = [
 
     {path: '', component: HomeComponent},
+    {path: 'login', component: LoginComponent},
     {path: 'restaurants', component: RestaurantsComponent},
     {path: 'restaurants/:id', component: RestaurantDetailComponent,
         children: [
