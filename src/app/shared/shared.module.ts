@@ -1,3 +1,4 @@
+
 import { FormsModule, ReactiveFormsModule, FormControlName } from '@angular/forms';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,7 @@ import { NotificationService } from './messages/notification.service';
 
 import { LoginService } from './../security/login/login.service';
 
+import { LoggedInGuard } from './../security/loggedin.guard';
 @NgModule({
     declarations: [InputComponent, RadioComponent, RatingComponent, SnackbarComponent],
     imports: [CommonModule, FormsModule, ReactiveFormsModule],
@@ -30,7 +32,8 @@ export class SharedModule {
                         RestaurantsServices,
                         OrderService,
                         NotificationService,
-                        LoginService]
+                        LoginService,
+                        LoggedInGuard]
         }
     }
 }
