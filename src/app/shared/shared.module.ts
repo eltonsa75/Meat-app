@@ -1,7 +1,10 @@
+import { AuthInterceptor } from './../security/auth.interceptot';
 
 import { FormsModule, ReactiveFormsModule, FormControlName } from '@angular/forms';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import {HTTP_INTERCEPTORS} from '@angular/common/http'
 
 import { RatingComponent } from './rating/rating.component';
 import { RadioComponent } from './radio/radio.component';
@@ -33,7 +36,9 @@ export class SharedModule {
                         OrderService,
                         NotificationService,
                         LoginService,
-                        LoggedInGuard]
+                        LoggedInGuard,
+                        {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+                        ]
         }
     }
 }
