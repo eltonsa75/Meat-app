@@ -9,6 +9,8 @@ import { FormGroup, FormBuilder, FormControl, Validators, AbstractControl } from
 import { Router } from '@angular/router';
 
 import { Order, OrderItem } from "./order.model";
+import { tap } from 'rxjs/operators';
+
 
 
 @Component({
@@ -86,7 +88,7 @@ export class OrderComponent implements OnInit {
     this.orderService.remove(item);
   }
 
-  isOrderCompleted() {
+  isOrderCompleted(): boolean {
     return this.orderId !== undefined
   }
 
@@ -96,10 +98,10 @@ export class OrderComponent implements OnInit {
       .map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id));
 
     this.orderService.checkOrder(order)
-    .do((orderId: string) => {
+    .pipe(tap((orderId: string) => {
       this.orderId = orderId
-    })
-      .subscribe((orderId: string) => {
+    }))
+    .subscribe((orderId: string) => {
         this.router.navigate(['/order-summary'])
         console.log(`Compra Concluída: ${orderId}`)
         this.orderService.clear()

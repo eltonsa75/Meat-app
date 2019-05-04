@@ -4,9 +4,9 @@ import { OrderComponent } from './order.component';
 export class LeaveOrderGuard implements CanDeactivate<OrderComponent> {
 
     canDeactivate(orderComponent: OrderComponent,
-                  activateRouter: ActivatedRouteSnapshot,
+                  activateRoute: ActivatedRouteSnapshot,
                   routerState: RouterStateSnapshot): boolean {
-        if (orderComponent.isOrderCompleted()){
+        if (!orderComponent.isOrderCompleted()) {
             return window.confirm('Deseja desistir da Compra? ')
         } else {
             return true
