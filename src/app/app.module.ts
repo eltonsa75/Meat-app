@@ -3,11 +3,13 @@ import { NgModule, LOCALE_ID, ErrorHandler } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LocationStrategy, HashLocationStrategy, registerLocaleData } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy, registerLocaleData} from '@angular/common';
+
 import locatePt from '@angular/common/locales/pt';
 
-
 registerLocaleData(locatePt, 'pt')
+
+
 
 import { ApplicationErrorHandler } from './app.error-handler';
 import {ROUTES} from './app.routes';
